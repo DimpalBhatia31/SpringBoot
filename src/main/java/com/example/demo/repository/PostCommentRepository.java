@@ -6,4 +6,5 @@ import com.example.demo.model.PostComment;
 
 public interface PostCommentRepository extends JpaRepository<PostComment, Long> {
 
+	// Git 
 }

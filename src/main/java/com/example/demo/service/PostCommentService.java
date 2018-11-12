@@ -34,13 +34,8 @@ public class PostCommentService {
 		SessionFactory sessionfactory=new Configuration().configure().buildSessionFactory();
 		Session session=sessionfactory.openSession();
 		session.beginTransaction();
-		
-		
-		 
 		/*Session session = HibernateUtil.getSessionFactory().openSession();
-	      session.beginTransaction();*/
-	       
-		
+	      session.beginTransaction();*/		
 		PostComment postComt=new PostComment();
 		postComt.setPostComment(postComment.getPostComment());
 		Post p=postRepo.getOne(id);
@@ -55,9 +50,7 @@ public class PostCommentService {
 		session.persist(p);
 		session.getTransaction().commit();
 		session.close();
-		///postRepo.save(p);
-		
-		
+		///postRepo.save(p);		
 	}
 	
 	public void deleteComment(Long id)
@@ -78,5 +71,7 @@ public class PostCommentService {
 	{
 		return postCRepo.findAll();
 	}
+	
+	// Third Commit to check 
 
 }
