@@ -35,5 +35,7 @@ public class PostService {
 	{
 		return postReo.findAll();
 	}
+	
+//	public void set
 
 }
